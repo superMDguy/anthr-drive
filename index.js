@@ -53,7 +53,10 @@ async function extractHighlights(docId) {
 }
 
 function simplifyColor(color) {
-  return `rgb(${color.red || 0}, ${color.green || 0}, ${color.blue || 0})`;
+  const fixRange = (x) => Math.floor((x || 0) * 255);
+  return `rgb(${fixRange(color.red)}, ${fixRange(color.green)}, ${fixRange(
+    color.blue
+  )})`;
 }
 
 async function main() {
