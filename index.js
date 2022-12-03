@@ -77,6 +77,6 @@ async function main() {
     }
   }
 
-  fs.writeFileSync("out.json", JSON.stringify(allHighlights, null, 2));
+  fs.writeFileSync("highlights.json", JSON.stringify(allHighlights, null, 2));
 }
 main();
